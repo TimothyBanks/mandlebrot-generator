@@ -43,7 +43,7 @@ public:
       {
         // This value doesn't belong in the Mandlebrot set.  Apparently we are checking if Z is divergent
         // and if the distance of Z is more than 2 units from the origin then it will inevitably go to infinity.
-        auto t = static_cast<double>(i) / static_cast<double>(m_max_iterations);
+        auto t = static_cast<double>(i) / static_cast<double>(iterations);
         
         // Use smooth polynomials for r, g, b
         auto r = static_cast<int8_t>(9*(1-t)*t*t*t*255);

@@ -32,6 +32,21 @@ struct View
   T right;
   T bottom;
   
+  View() = default;
+  View(const View&) = default;
+  View(View&&) = default;
+  
+  View& operator=(const View&) = default;
+  View& operator=(View&&) = default;
+  
+  View(T left_, T top_, T right_, T bottom_)
+  : left{std::move(left_)},
+    top{std::move(top_)},
+    right{std::move(right_)},
+    bottom{std::move(bottom_)}
+  {
+  }
+  
   T width() const
   {
     if (right > left)

@@ -34,7 +34,7 @@ struct Generator_task_parameters : Task_parameters
   static std::vector<Generator_task_parameters> distribute(std::string task_identifier,
                                                            std::shared_ptr<std::atomic<bool>> cancel_token,
                                                            Completed_callback on_task_completed,
-                                                           Canceled_callback on_task_canceled,
+                                                           Canceled_callback on_task_canceled,	
                                                            Fractal_view view,
                                                            size_t tile_width,
                                                            size_t tile_height)
