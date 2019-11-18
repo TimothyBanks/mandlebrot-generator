@@ -35,13 +35,14 @@ endif ()
 ################################
 # Target : Build PubSub sample #
 ################################
-set(ON_BOARDING_PROJECT_DEVICE_TARGET_NAME on-boarding-project-subscriber)
+set(ON_BOARDING_PROJECT_DEVICE_TARGET_NAME mandlebrot-subscriber)
 # Add Target
 add_executable(${ON_BOARDING_PROJECT_DEVICE_TARGET_NAME} "${PROJECT_SOURCE_DIR}/main.cpp;${PROJECT_SOURCE_DIR}/../../common/ConfigCommon.cpp")
 
 # Add Target specific includes
 target_include_directories(${ON_BOARDING_PROJECT_DEVICE_TARGET_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/../../common)
 target_include_directories(${ON_BOARDING_PROJECT_DEVICE_TARGET_NAME} PUBLIC ${PROJECT_SOURCE_DIR})
+target_include_directories(${ON_BOARDING_PROJECT_DEVICE_TARGET_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/library)
 
 # Configure Threading library
 find_package(Threads REQUIRED)

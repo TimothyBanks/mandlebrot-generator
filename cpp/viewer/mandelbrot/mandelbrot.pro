@@ -6,7 +6,7 @@ SOURCES       = main.cpp \
                 mandelbrotwidget.cpp \
                 renderthread.cpp
 
-INCLUDEPATH += ../../⁨fractal/⁨fractal/⁨include⁩ /Users/banksti/Documents/projects/fractal/fractal/include
+INCLUDEPATH += $$PWD/../../library/include
 #DEPENDPATH += ../../⁨fractal/⁨fractal/⁨include⁩
 CONFIG += c++1z
 

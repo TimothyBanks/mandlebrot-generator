@@ -25,13 +25,6 @@
 /* Begin PBXFileReference section */
 		351E30E92354ABD3008A93A4 /* fractal */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = fractal; sourceTree = BUILT_PRODUCTS_DIR; };
 		351E30EC2354ABD3008A93A4 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		351E30F62354B1FD008A93A4 /* distributed_generator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = distributed_generator.h; sourceTree = "<group>"; };
-		351E30F72354B217008A93A4 /* fractal_view.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fractal_view.h; sourceTree = "<group>"; };
-		351E30F82354B223008A93A4 /* mandlebrot_function.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mandlebrot_function.h; sourceTree = "<group>"; };
-		351E30FB2354D702008A93A4 /* ppm_stream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ppm_stream.h; sourceTree = "<group>"; };
-		351E30FD23577626008A93A4 /* julia_function.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = julia_function.h; sourceTree = "<group>"; };
-		354D3FBC236758B30020C886 /* messages.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = messages.h; sourceTree = "<group>"; };
-		354D3FBD236769710020C886 /* task_parameters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = task_parameters.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,17 +58,8 @@
 			isa = PBXGroup;
 			children = (
 				351E30FF2358D84F008A93A4 /* src */,
-				351E30FE2358D842008A93A4 /* include */,
 			);
 			path = fractal;
-			sourceTree = "<group>";
-		};
-		351E30FE2358D842008A93A4 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				351E31002358D8B2008A93A4 /* fractal */,
-			);
-			path = include;
 			sourceTree = "<group>";
 		};
 		351E30FF2358D84F008A93A4 /* src */ = {
@@ -84,20 +68,6 @@
 				351E30EC2354ABD3008A93A4 /* main.cpp */,
 			);
 			path = src;
-			sourceTree = "<group>";
-		};
-		351E31002358D8B2008A93A4 /* fractal */ = {
-			isa = PBXGroup;
-			children = (
-				351E30F82354B223008A93A4 /* mandlebrot_function.h */,
-				351E30F62354B1FD008A93A4 /* distributed_generator.h */,
-				351E30F72354B217008A93A4 /* fractal_view.h */,
-				351E30FB2354D702008A93A4 /* ppm_stream.h */,
-				351E30FD23577626008A93A4 /* julia_function.h */,
-				354D3FBC236758B30020C886 /* messages.h */,
-				354D3FBD236769710020C886 /* task_parameters.h */,
-			);
-			path = fractal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,28 +246,26 @@
 		351E30F12354ABD3008A93A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CODE_SIGN_STYLE = Automatic;
-				HEADER_SEARCH_PATHS = (
-					.,
-					/Users/banksti/Documents/projects/fractal/fractal/include,
-					/Users/banksti/Documents/projects/fractal/fractal/,
-				);
+				HEADER_SEARCH_PATHS = ../library/include;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYSTEM_HEADER_SEARCH_PATHS = "";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
 		351E30F22354ABD3008A93A4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CODE_SIGN_STYLE = Automatic;
-				HEADER_SEARCH_PATHS = (
-					.,
-					/Users/banksti/Documents/projects/fractal/fractal/include,
-					/Users/banksti/Documents/projects/fractal/fractal/,
-				);
+				HEADER_SEARCH_PATHS = ../library/include;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYSTEM_HEADER_SEARCH_PATHS = "";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};

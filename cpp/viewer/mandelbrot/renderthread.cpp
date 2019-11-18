@@ -85,8 +85,8 @@ void RenderThread::run()
                                                                      on_task_completed,
                                                                      on_task_canceled,
                                                                      fractal_view,
-                                                                     512,
-                                                                     512);
+                                                                     0,
+                                                                     0);
 
         auto generator = Fractal::Distributed_generator{3};
         generator(function, tasks);
